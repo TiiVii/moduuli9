@@ -25,11 +25,12 @@ for kierros in range(10):
     autotalli.append((autosaatana))
 
 while autosaatana.kmatka < 10000:
-    for o in autotalli:
+    if autosaatana.kmatka >= 10000:
+        break
+    for autosaatana in autotalli:
         autosaatana.kiihdyta(random.randint(-10,15))
         autosaatana.kulje(1)
-    else:
-        break
+
 
 vittusaatana = []
 for autosaatana in autotalli:
