@@ -25,14 +25,14 @@ for kierros in range(10):
     autotalli.append((autosaatana))
 
 while autosaatana.kmatka < 10000:
-    for i in autotalli:
+    for o in autotalli:
         autosaatana.kiihdyta(random.randint(-10,15))
         autosaatana.kulje(1)
     else:
         break
 
 vittusaatana = []
-for vittusaatana in autotalli:
+for autosaatana in autotalli:
     vittusaatana.append((autosaatana.rekisteri, autosaatana.hnopeus, autosaatana.thnopeus, autosaatana.kmatka))
 
 print(tabulate(vittusaatana, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka']))
