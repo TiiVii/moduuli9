@@ -40,9 +40,4 @@ yhteenveto = []
 for auton_muodostus in autotalli:
     yhteenveto.append((auton_muodostus.rekisteri, auton_muodostus.hnopeus, auton_muodostus.thnopeus, auton_muodostus.kmatka, kierros))
 
-print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka', 'Kierros']))
-
-#Jokaisen auton nopeutta muutetaan siten, että nopeuden muutos arvotaan
-# väliltä -10 ja +15 km/h väliltä. Tämä tehdään kutsumalla kiihdytä-metodia.
-#Kaikkia autoja käsketään liikkumaan yhden tunnin ajan. Tämä tehdään kutsumalla kulje-metodia.
-
+print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka', 'Kisojen määrä']))
