@@ -32,7 +32,7 @@ while autosaatana.kmatka < 10000:
         break
 
 vittusaatana = []
-for kierros in autotalli:
+for vittusaatana in autotalli:
     vittusaatana.append((autosaatana.rekisteri, autosaatana.hnopeus, autosaatana.thnopeus, autosaatana.kmatka))
 
 print(tabulate(vittusaatana, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka']))
