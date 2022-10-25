@@ -21,21 +21,26 @@ class auto():
 autotalli= []
 
 for kierros in range(10):
-    auton_muodostus = auto((f'ABC- {kierros+1}'), random.randint(100, 200), 0, 0)
+    auton_muodostus = auto((f'ABC-{kierros+1}'), random.randint(100, 200), 0, 0)
     autotalli.append((auton_muodostus))
 
-while auton_muodostus.kmatka < 10000:
+kierros=0
+
+while True:
+    kierros += 1
     if auton_muodostus.kmatka >= 10000:
         break
     for auton_muodostus in autotalli:
         auton_muodostus.kiihdyta(random.randint(-10,15))
         auton_muodostus.kulje(1)
 
+#kisojen_maara
+
 yhteenveto = []
 for auton_muodostus in autotalli:
-    yhteenveto.append((auton_muodostus.rekisteri, auton_muodostus.hnopeus, auton_muodostus.thnopeus, auton_muodostus.kmatka))
+    yhteenveto.append((auton_muodostus.rekisteri, auton_muodostus.hnopeus, auton_muodostus.thnopeus, auton_muodostus.kmatka, kierros))
 
-print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka']))
+print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka', 'Kierros']))
 
 #Jokaisen auton nopeutta muutetaan siten, että nopeuden muutos arvotaan
 # väliltä -10 ja +15 km/h väliltä. Tämä tehdään kutsumalla kiihdytä-metodia.
