@@ -40,4 +40,4 @@ yhteenveto = []
 for auton_muodostus in autotalli:
     yhteenveto.append((auton_muodostus.rekisteri, auton_muodostus.hnopeus, auton_muodostus.thnopeus, auton_muodostus.kmatka, kierros))
 
-print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka', 'Kisojen määrä']))
+print(tabulate(yhteenveto, headers=['Rekisteri', 'Huippunopeus', 'Tämänhetkinen nopeus', 'Kuljettumatka', 'Kisojen määrä'], tablefmt='double_grid'))
